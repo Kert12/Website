@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+
+{% block webcontent %}
+
+
+<div class="container">
+    <div class="col-sm-9">
+        <div class="row">
+            {% for entry in cart_entries %}
+            <div class="col-sm-4">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Sales</div>
+
+                    <div class="panel-body">
+                        <div class="image-container">
+                            <img src="https://thumbs.dreamstime.com/b/old-book-flying-letters-magic-light-background-bookshelf-library-ancient-books-as-symbol-knowledge-history-218640948.jpg" class="img-responsive" alt="Image">
+                        </div>
+
+                        <hr>
+                        <h2>{{ entry.title }}</h2>
+
+                        <br>
+                        <p>{{ entry.body }}</p>
+                        <br><br>
+                    </div>
+
+                    <div class="panel-footer"><button class="w3-button w3-aqua">BUY NOW</button></div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}
+
+<p><button class="w3-button w3-aqua">Aqua</button></p>
+<p><button class="w3-button w3-border w3-hover-lime">Buy Now</button></p>
